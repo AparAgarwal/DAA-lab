@@ -23,29 +23,31 @@ bool binarySearch(int arr[], int size, int key, int& comparisons) {
 }
 
 int main() {
-    int size;
-    cout << "Enter the size of the array: ";
-    cin >> size;
+    int T, k = 0;
+    cin >> T;
+    while (k < T)
+    {
+        int size;
+        cin >> size;
 
-    int arr[size];
-    cout << "Enter the elements of the array: ";
-    for (int i = 0; i < size; i++) {
-        cin >> arr[i];
+        int arr[size];
+        for (int i = 0; i < size; i++) {
+            cin >> arr[i];
+        }
+
+        int key;
+        cin >> key;
+
+        int comparisons = 0;
+
+        if (binarySearch(arr, size, key, comparisons)) {
+            cout << "Present ";
+        } else {
+            cout << "Not Present ";
+        }
+
+        cout << comparisons << "\n";
+        k++;
     }
-
-    int key;
-    cout << "Enter the key to search: ";
-    cin >> key;
-
-    int comparisons = 0;
-
-    if (binarySearch(arr, size, key, comparisons)) {
-        cout << "Present ";
-    } else {
-        cout << "Not Present ";
-    }
-
-    cout << comparisons << "\n";
-
     return 0;
 }

@@ -33,9 +33,9 @@ bool jumpSearch(int arr[], int size, int key, int &comparisons)
 
 int main()
 {
-    int T, i = 0;
+    int T, k = 0;
     cin >> T;
-    while (i < T)
+    while (k < T)
     {
         int size;
         cin >> size;
@@ -61,7 +61,7 @@ int main()
         }
 
         std::cout << comparisons << "\n";
-        i++;
+        k++;
     }
-        return 0;
+    return 0;
 }
