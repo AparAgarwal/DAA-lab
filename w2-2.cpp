@@ -6,10 +6,6 @@ Given a sorted array of positive integers, design an algorithm and implement it 
 #include <vector>
 using namespace std;
 
-#include <iostream>
-#include <vector>
-using namespace std;
-
 int binarySearch(vector<int>& arr, int low, int high, int key) {
     while (low <= high) {
         int mid = low + (high - low) / 2;
